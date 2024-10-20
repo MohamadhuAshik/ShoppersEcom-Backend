@@ -1,3 +1,5 @@
+const PORT = 4000
+
 const imageUploader = (req, res) => {
     res.json({
         success: 1,
