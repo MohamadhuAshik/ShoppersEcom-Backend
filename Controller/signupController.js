@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const UserSchema = require("../Model/usersSchema");
-const Users = mongoose.model("Users",UserSchema)
+const Users = mongoose.model("Users", UserSchema)
+const jwt = require("jsonwebtoken")
 
 const signup = async (req, res) => {
     let check = await Users.findOne({ email: req.body.email });
